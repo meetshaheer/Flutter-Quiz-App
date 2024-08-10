@@ -34,11 +34,14 @@ class Firstscreen extends StatelessWidget {
               const SizedBox(
                 height: 150,
               ),
-              const Image(
-                image: AssetImage(
-                  "assets/start_image.png",
+              const Opacity(
+                opacity: 0.8,
+                child: Image(
+                  image: AssetImage(
+                    "assets/start_image.png",
+                  ),
+                  width: 250,
                 ),
-                width: 250,
               ),
               const SizedBox(
                 height: 100,
@@ -61,14 +64,18 @@ class Firstscreen extends StatelessWidget {
               SizedBox(
                 height: 50,
                 width: 200,
-                child: ElevatedButton(
+                child: OutlinedButton.icon(
                   onPressed: () {},
                   style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
                       Colors.transparent,
                     ),
                   ),
-                  child: const Text(
+                  icon: Icon(
+                    Icons.arrow_forward_sharp,
+                    color: Color.fromARGB(255, 252, 221, 255),
+                  ),
+                  label: const Text(
                     "Take a Look",
                     style: TextStyle(
                       fontSize: 20,
