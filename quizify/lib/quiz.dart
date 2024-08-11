@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:quizify/first_screen.dart';
 
 class Quiz extends StatefulWidget {
-  const Quiz({super.key});
+  const Quiz({
+    super.key,
+  });
 
   @override
   State<Quiz> createState() => _QuizState();
