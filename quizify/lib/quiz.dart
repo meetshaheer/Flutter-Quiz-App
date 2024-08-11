@@ -25,7 +25,13 @@ class _QuizState extends State<Quiz> {
   //     activeScreen = const QuestionScreen();
   //   });
   // }
-
+  //
+  ///
+  ///
+  ///
+  /// Context screen onpressed button passing the argument screen
+  ///
+  ///
   Widget? activeScreen;
 
   @override
