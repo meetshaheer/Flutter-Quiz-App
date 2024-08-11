@@ -11,7 +11,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Question Screen"),
+      appBar: AppBar(),
+      body: Center(child: Text("Question Screen")),
     );
   }
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Firstscreen extends StatelessWidget {
-  const Firstscreen({super.key});
+  const Firstscreen(this.quizStart, {super.key});
+
+  final void Function() quizStart;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,9 @@ class Firstscreen extends StatelessWidget {
                 height: 50,
                 width: 200,
                 child: OutlinedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    quizStart();
+                  },
                   style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(
                       Colors.transparent,
