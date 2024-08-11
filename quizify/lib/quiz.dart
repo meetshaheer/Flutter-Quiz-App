@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quizify/first_screen.dart';
 
-void main(List<String> args) {
-  runApp(const MyApp());
+class Quiz extends StatefulWidget {
+  const Quiz({super.key});
+
+  @override
+  State<Quiz> createState() => _QuizState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(

@@ -34,28 +34,21 @@ class Firstscreen extends StatelessWidget {
               const SizedBox(
                 height: 150,
               ),
-              const Opacity(
-                opacity: 0.8,
-                child: Image(
-                  image: AssetImage(
-                    "assets/start_image.png",
-                  ),
-                  width: 250,
+              const Image(
+                image: AssetImage(
+                  "assets/start_image.png",
                 ),
+                width: 350,
+                color: Color.fromARGB(173, 253, 225, 255),
               ),
               const SizedBox(
-                height: 100,
+                height: 60,
               ),
               const Text(
-                "Test Your Flutter Journey",
+                "Test Your Flutter Journey!",
                 style: TextStyle(
-                  fontSize: 25,
-                  color: Color.fromARGB(
-                    255,
-                    254,
-                    221,
-                    255,
-                  ),
+                  fontSize: 23,
+                  color: Color.fromARGB(195, 252, 210, 254),
                 ),
               ),
               const SizedBox(
@@ -71,21 +64,15 @@ class Firstscreen extends StatelessWidget {
                       Colors.transparent,
                     ),
                   ),
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_forward_sharp,
-                    color: Color.fromARGB(255, 252, 221, 255),
+                    color: Color.fromARGB(195, 252, 210, 254),
                   ),
                   label: const Text(
                     "Take a Look",
                     style: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromARGB(
-                        255,
-                        254,
-                        238,
-                        255,
-                      ),
-                    ),
+                        fontSize: 18,
+                        color: Color.fromARGB(195, 252, 210, 254)),
                   ),
                 ),
               )
