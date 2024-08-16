@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizify/custom_button.dart';
+import 'package:quizify/Widgets/custom_button.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
