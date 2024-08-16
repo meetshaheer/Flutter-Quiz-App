@@ -32,20 +32,6 @@ class _QuizState extends State<Quiz> {
   /// Context screen onpressed button passing the argument screen
   ///
   ///
-  // Widget? activeScreen;
-
-  // @override
-  // void initState() {
-  //   activeScreen = Firstscreen(switchScreen);
-  //   super.initState();
-  // }
-
-  // switchScreen() {
-  //   setState(() {
-  //     activeScreen = const QuestionScreen();
-  //   });
-  // }
-
   Widget? activeScreen;
 
   @override
@@ -54,8 +40,10 @@ class _QuizState extends State<Quiz> {
     super.initState();
   }
 
-  void switchScreen() {
-    activeScreen = QuestionScreen();
+  switchScreen() {
+    setState(() {
+      activeScreen = const QuestionScreen();
+    });
   }
 
   @override

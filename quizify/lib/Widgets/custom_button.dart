@@ -1,8 +1,16 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
-class anwerButtons extends StatelessWidget {
-  const anwerButtons({super.key});
+class answerButtons extends StatelessWidget {
+  const answerButtons({
+    super.key,
+    required this.answerText,
+    required this.ontap,
+  });
 
+  final String answerText;
+  final void Function() ontap;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,9 +34,9 @@ class anwerButtons extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: const Text(
-            "Anwer1",
-            style: TextStyle(
+          child: Text(
+            answerText,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 17,
             ),
