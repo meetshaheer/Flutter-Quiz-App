@@ -16,6 +16,7 @@ class answerButtons extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: SizedBox(
+        width: 260,
         height: 46,
         child: ElevatedButton(
           style: ButtonStyle(
