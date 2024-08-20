@@ -58,7 +58,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
           //           answerText: activeQuestion.answers[index], ontap: () {});
           //     }),
 
-          ...activeQuestion.answers.map((answer) {
+          ...activeQuestion.getShuffledList().map((answer) {
             return Padding(
               padding: const EdgeInsets.only(left: 70, right: 70),
               child: answerButtons(answerText: answer, ontap: () {}),
