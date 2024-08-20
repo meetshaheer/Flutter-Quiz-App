@@ -1,6 +1,6 @@
 class QuizQuestion {
-  QuizQuestion(this.text, this.answers);
+  QuizQuestion(this.question, this.answers);
 
-  final String text;
+  final String question;
   final List<String> answers;
 }

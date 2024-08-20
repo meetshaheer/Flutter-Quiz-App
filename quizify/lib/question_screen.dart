@@ -36,7 +36,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 right: 30,
               ),
               child: Text(
-                activeQuestion.text,
+                activeQuestion.question,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   color: Color.fromARGB(255, 255, 210, 248),
@@ -48,17 +48,22 @@ class _QuestionScreenState extends State<QuestionScreen> {
           const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 70, right: 70),
-            child: ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: activeQuestion.answers.length,
-                itemBuilder: (context, index) {
-                  return answerButtons(
-                      answerText: activeQuestion.answers[index], ontap: () {});
-                }),
-          ),
+
+          // child: ListView.builder(
+          //     shrinkWrap: true,
+          //     physics: NeverScrollableScrollPhysics(),
+          //     itemCount: activeQuestion.answers.length,
+          //     itemBuilder: (context, index) {
+          //       return answerButtons(
+          //           answerText: activeQuestion.answers[index], ontap: () {});
+          //     }),
+
+          ...activeQuestion.answers.map((answer) {
+            return Padding(
+              padding: const EdgeInsets.only(left: 70, right: 70),
+              child: answerButtons(answerText: answer, ontap: () {}),
+            );
+          }),
         ],
       ),
     ));

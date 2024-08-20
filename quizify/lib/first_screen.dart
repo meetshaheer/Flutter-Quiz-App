@@ -50,7 +50,7 @@ class Firstscreen extends StatelessWidget {
                 "Test Your Flutter Journey!",
                 style: TextStyle(
                   fontSize: 23,
-                  color: Color.fromARGB(195, 252, 210, 254),
+                  color: Color.fromARGB(255, 255, 210, 248),
                 ),
               ),
               const SizedBox(
@@ -70,13 +70,13 @@ class Firstscreen extends StatelessWidget {
                   ),
                   icon: const Icon(
                     Icons.arrow_forward_sharp,
-                    color: Color.fromARGB(195, 252, 210, 254),
+                    color: Color.fromARGB(255, 255, 210, 248),
                   ),
                   label: const Text(
                     "Take a Look",
                     style: TextStyle(
                         fontSize: 18,
-                        color: Color.fromARGB(195, 252, 210, 254)),
+                        color: Color.fromARGB(255, 255, 210, 248)),
                   ),
                 ),
               )
