@@ -10,31 +10,35 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var currentQuestionIndex = 0;
+
+  void questionAnswer() {
+    setState(() {
+      currentQuestionIndex = currentQuestionIndex + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final activeQuestion = questions[0];
+    final activeQuestion = questions[currentQuestionIndex];
     return Scaffold(
-        body: Container(
-      width: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 55, 2, 74),
-            Color.fromARGB(255, 65, 1, 46)
-          ],
-          end: Alignment.bottomRight,
-          begin: Alignment.topLeft,
+      body: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 55, 2, 74),
+              Color.fromARGB(255, 65, 1, 46)
+            ],
+            end: Alignment.bottomRight,
+            begin: Alignment.topLeft,
+          ),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                left: 30,
-                right: 30,
-              ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
               child: Text(
                 activeQuestion.question,
                 textAlign: TextAlign.center,
@@ -44,28 +48,20 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-
-          // child: ListView.builder(
-          //     shrinkWrap: true,
-          //     physics: NeverScrollableScrollPhysics(),
-          //     itemCount: activeQuestion.answers.length,
-          //     itemBuilder: (context, index) {
-          //       return answerButtons(
-          //           answerText: activeQuestion.answers[index], ontap: () {});
-          //     }),
-
-          ...activeQuestion.getShuffledList().map((answer) {
-            return Padding(
-              padding: const EdgeInsets.only(left: 70, right: 70),
-              child: answerButtons(answerText: answer, ontap: () {}),
-            );
-          }),
-        ],
+            const SizedBox(
+              height: 20,
+            ),
+            ...activeQuestion.getShuffledList().map(
+              (answer) {
+                return answerButtons(
+                  answerText: answer,
+                  onpressed: questionAnswer,
+                );
+              },
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

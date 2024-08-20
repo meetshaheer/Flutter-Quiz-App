@@ -3,21 +3,21 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 class answerButtons extends StatelessWidget {
-  const answerButtons({
+  answerButtons({
     super.key,
     required this.answerText,
-    required this.ontap,
+    required this.onpressed,
   });
 
   final String answerText;
-  final void Function() ontap;
+  final void Function() onpressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 17),
+      padding: EdgeInsets.only(top: 17),
       child: SizedBox(
         width: 260,
-        height: 46,
+        height: 70,
         child: ElevatedButton(
           style: ButtonStyle(
             backgroundColor: const MaterialStatePropertyAll(
@@ -33,9 +33,10 @@ class answerButtons extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: onpressed,
           child: Text(
             answerText,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 17,
