@@ -46,7 +46,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
 
           // child: ListView.builder(
