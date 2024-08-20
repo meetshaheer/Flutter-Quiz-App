@@ -17,7 +17,6 @@ class answerButtons extends StatelessWidget {
       padding: EdgeInsets.only(top: 17),
       child: SizedBox(
         width: 260,
-        height: 70,
         child: ElevatedButton(
           style: ButtonStyle(
             backgroundColor: const MaterialStatePropertyAll(
@@ -34,12 +33,15 @@ class answerButtons extends StatelessWidget {
             ),
           ),
           onPressed: onpressed,
-          child: Text(
-            answerText,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 17,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 5, bottom: 5),
+            child: Text(
+              answerText,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+              ),
             ),
           ),
         ),
